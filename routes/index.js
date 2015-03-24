@@ -4,9 +4,9 @@ var models = require('../models');
 var async = require('async');
 
 router.get('/', function(req, res, next){
-	res.render('index');
+	//res.render('index');
+	res.send("You're connected.");
 });
-
 
 //Place
 //Hodel
