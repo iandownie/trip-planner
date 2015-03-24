@@ -24,7 +24,7 @@ app.use(sassMiddleware({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(logger);
+app.use(logger('dev'));
 
 app.use('/', routes);
 
