@@ -5,9 +5,10 @@ var swig = require('swig');
 var routes = require('./routes');
 var sassMiddleware = require('node-sass-middleware');
 var path = require('path');
+var async = require('async');
 
 
-var app=express();
+var app = express();
 
 app.listen(3000, function(){ console.log("Server is running"); });
 
@@ -21,12 +22,11 @@ app.use(sassMiddleware({
 	outputStyle: 'compressed',
 	prefix:  '/prefix'
 }));
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(logger);
 
-app.get('/', routes);
+app.use('/', routes);
 
 
 
