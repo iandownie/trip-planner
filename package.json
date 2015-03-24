@@ -1,0 +1,19 @@
+{
+  "name": "trip-planner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodedemon app.js"
+  },
+  "author": "Ian Downie",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "express": "^4.12.3",
+    "mongoose": "^3.8.25",
+    "morgan": "^1.5.2",
+    "swig": "^1.4.2"
+  }
+}
