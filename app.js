@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(logger);
 
-app.get('/', routes);
+app.use('/', routes);
 
 
 
