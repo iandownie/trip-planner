@@ -26,11 +26,9 @@ app.use(parser.urlencoded({extended: true}));
 
 //SASS middleware connection:
 app.use(sassMiddleware({
-	src: __dirname,
+	src: path.join(__dirname, 'assets'),
 	dest: path.join(__dirname, 'public'),
-	debug: true,
-	outputStyle: 'compressed',
-	prefix:  '/prefix'
+	debug: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
