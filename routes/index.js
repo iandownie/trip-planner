@@ -3,14 +3,11 @@ var router = express.Router();
 var models = require('../models');
 var async = require('async');
 
+
 router.get('/', function(req, res, next){
-	//res.render('index');
-	res.send("You're connected.");
+	res.render('planner');
 });
 
-//Place
-//Hodel
-//thingstodo
-//Restaurant
+
 
 module.exports = router;

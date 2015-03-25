@@ -1,0 +1,128 @@
+
+
+body {
+  font-style: helvetica;
+margin: 0;
+    display: block;
+  padding: 0;
+  background-color: #A37D62;
+}
+nav.nav-bar {
+    background-color: #69533F;
+    width: 100%;
+    color: rgb(144, 207, 240);
+    padding: 15px 0 0 0;
+    height: 40px;
+
+}
+div.nav-title{
+  display: inline;
+  padding: 30px 10px;
+  margin-top: 40px;
+}
+.nav-button{
+  display: inline;
+  padding: 30px 10px;
+
+}
+div.nav-button:hover{
+  background-color: rgb(90, 47, 5);
+}
+label{
+  font-style: helvetica;
+  color:rgb(123, 116, 110);
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+}
+select{
+  margin: 7px;
+  width:75%;
+}
+option{
+  font-style: helvetica;
+  font-size: 15px;
+  font-weight: bolder;
+  padding: 3px;
+}
+.do-list, .day-list{
+  padding: 20px 10px;
+  background-color: rgb(237, 206, 164);
+  margin:20px 10px;
+  border-radius: 25px;
+}
+
+.btn-x{
+  background-color: rgb(205, 55, 55);
+}
+.btn-x:hover{
+  background-color: red;
+}
+.btn-plus{
+  background-color: rgb(79, 154, 253);
+}
+.btn-plus:hover{
+  background-color: blue;
+}
+.day{
+  border: 3px solid rgb(84, 42, 12);
+  padding:10px;
+  margin: 40px 100px 10px;
+  border-radius: 10px;
+}
+.day p{
+  font-style: helvetica;
+  color:rgb(84, 42, 12);
+  font-size: 35px;
+  display: inline;
+  font-size: 25px;
+  font-weight: bolder;
+}
+button{
+  padding:5px 10px;
+  border-radius: 50%;
+  color: white;
+}
+
+h1{
+  margin:0;
+  padding:1%;
+  display: inline;
+
+}
+.list {
+  margin-top: 40px;
+}
+li{
+
+  list-style: none;
+}
+li p{
+  font-size: 20px;
+  font-style: helvetica;
+
+}
+.entry-item{
+  width: 120px;
+  margin: 13px;
+  display: inline-block;
+}
+.list-banner{
+  border-radius: 25px;
+  padding: 15px;
+  margin: -20px -10px -20px -10px;
+  width:97%;
+  background-color:rgb(84, 42, 12);
+}
+.nav-button a{
+    text-decoration: none;
+    color:rgb(144, 207, 240);
+}
+.col-lg-9{
+  width:75%;
+  float: left;
+}
+.col-lg-3{
+  width:25%;
+  float:left;
+}

@@ -10,6 +10,13 @@ var async = require('async');
 
 var app = express();
 
+// Swig Setup
+swig.setDefaults({ cache: false });
+app.engine('html', swig.renderFile);
+app.set('view engine', 'html');
+app.set('views', __dirname + '/views');
+app.set('view cache', false);
+
 //Turn on the server
 app.listen(3000, function(){ console.log("Server is running"); });
 
@@ -27,15 +34,8 @@ app.use(sassMiddleware({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-<<<<<<< HEAD
-app.use(logger('dev'));
-
-app.use('/', routes);
-
-=======
 //Making Bower accessible
 app.use('/bower_components', express.static(path.join(__dirname, 'bower_components')));
->>>>>>> origin/wesley-branch
 
 //Morgan Logging
 app.use(logger);
