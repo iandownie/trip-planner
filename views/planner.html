@@ -8,34 +8,28 @@
 	</div>
 	<div class="col-lg-3">
 		<div class="do-list">
-			<label for="choice1">Hotels</label>
-			<select name="choice-hotel">
-				<option selected>Plan 1</option>
-				<option>Plan 2</option>
-				<option>Plan 3</option>
-				<option>Plan 4</option>
-				<option>Plan 5</option>
-			</select>
-			<button type="submit" class="btn btn-choice btn-plus">+</button>
-			<label for="choice2">Restaurants</label>
-			<select name="choice-restaurant">
-				<option selected>Plan 1</option>
-				<option>Plan 2</option>
-				<option>Plan 3</option>
-				<option>Plan 4</option>
-				<option>Plan 5</option>
-			</select>
-			<button type="submit" class="btn btn-choice btn-plus">+</button>
-			<label for="choice3">Things To Do</label>
-			<select name="choice-do">
-				<option selected>Plan 1</option>
-				<option>Plan 2</option>
-				<option>Plan 3</option>
-				<option>Plan 4</option>
-				<option>Plan 5</option>
-			</select>
-			<button type="submit" class="btn btn-choice btn-plus">+</button>		
-		</div>
+            <label for="choice1">Hotels</label>
+            <select name="choice-hotel">
+            {% for hotel in all_hotels %}
+                <option >{{hotel.name}}</option>
+            {% endfor %}    
+            </select>
+            <button type="submit" class="btn btn-choice btn-plus">+</button>
+            <label for="choice2">Restaurants</label>
+            <select name="choice-restaurant">
+            {% for restaurant in all_restaurants %}
+                <option >{{restaurant.name}}</option>
+            {% endfor %}
+            </select>
+            <button type="submit" class="btn btn-choice btn-plus">+</button>
+            <label for="choice3">Things To Do</label>
+            <select name="choice-do">
+            {% for thingToDo in all_thingToDos %}
+                <option >{{thingToDo.name}}</option>
+            {% endfor %}
+            </select>
+            <button type="submit" class="btn btn-choice btn-plus">+</button>        
+        </div>
 		<div class="day">
 			<p>Day 2 </p>
 			<button type="submit" class="btn btn-x">X</button>
