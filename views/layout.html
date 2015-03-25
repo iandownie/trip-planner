@@ -7,9 +7,8 @@
     <meta name="author" content="Ian and Partner, LTD">
 
     <title>IW Trip Planner!</title>
-
+    
     <link href="/stylesheets/planner.css" rel="stylesheet">
-    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
   </head>
 
@@ -32,7 +31,188 @@
 
     {% block body %}{% endblock %}
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA95cMpfB16X8rdkcVAs9JjVKvr0-0FXug&sensor=true"></script>
+    <script>
+      function initialize_gmaps() {
+        // initialize new google maps LatLng object
+        var myLatlng = new google.maps.LatLng(40.705129,-74.009170);
+        var resLatlng = new google.maps.LatLng(40.705379,-74.006250);
+        var todoLatlng = new google.maps.LatLng(40.705279,-74.011850);
+        var hot1Latlng = new google.maps.LatLng(40.709179,-74.015950);
+        var hot2Latlng = new google.maps.LatLng(40.705579,-74.016450);
+        var hot4Latlng = new google.maps.LatLng(40.711679,-74.016350);
+        var hot5Latlng = new google.maps.LatLng(40.710249,-74.006150);
+        // set the map options hash
+        var styles= [
+          {
+            featureType: "water",
+            stylers: [
+              { hue: "#0008ff" },
+              { invert_lightness: true },
+              { visibility: "simplified" },
+              { color: "#8080ff" },
+              { saturation: 100 },
+              { lightness: -60 }
+            ]
+          },{
+            featureType: "road",
+            stylers: [
+              { visibility: "simplified" },
+              { hue: "#086976" },
+              { saturation: 56 }
+            ]
+          },{
+            featureType: "poi",
+            stylers: [
+              { visibility: "off" }
+            ]
+          },{
+            featureType: "administrative",
+            stylers: [
+              { visibility: "off" }
+            ]
+          },{
+            featureType: "transit",
+            stylers: [
+              { visibility: "off" }
+            ]
+          },{
+            featureType: "road.local",
+            elementType: "geometry",
+            stylers: [
+              { visibility: "on" },
+              { hue: "#ff4d00" },
+              { lightness: 8 }
+            ]
+          },{
+            "featureType": "road.local",
+            "elementType": "labels.text",
+            "stylers": [
+              { "visibility": "off" }
+            ]
+          },{
+            "featureType": "administrative.neighborhood",
+            "elementType": "labels.text",
+            "stylers": [
+              { "visibility": "simplified" },
+              { "lightness": -100 }
+            ]
+          },{
+            featureType: "poi.business",
+            stylers: [
+              { visibility: "on" }
+            ]
+          },{
+            featureType: "transit.station",
+            stylers: [
+              { visibility: "off" }
+            ]
+          },{
+            featureType: "landscape.natural",
+            stylers: [
+              { visibility: "off" }
+            ]
+          },{
+            featureType: "poi.attraction",
+            elementType: "labels",
+            stylers: [
+              { hue: "#ff1a00" },
+              { saturation: 100 },
+              { lightness: 34 },
+              { visibility: "simplified" }
+            ]
+          },{
+            featureType: "poi.business",
+            stylers: [
+              { visibility: "simplified" },
+              { hue: "#ff0008" },
+              { saturation: 100 },
+              { lightness: 39 }
+            ]
+          }
+        ];
+         var styledMap = new google.maps.StyledMapType(styles,
+    {name: "Styled Map"});
+        var mapOptions = {
+          center: myLatlng,
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
 
+        // get the maps div's HTML obj
+        var map_canvas_obj = document.getElementById("map");
+        // initialize a new Google Map with the options
+        var map = new google.maps.Map(map_canvas_obj, mapOptions);
+        // Add the marker to the map
+        var image='images/here.png'
+        var resIcon="images/restaurant_icon.png"
+        var todoIcon="images/map.png"
+
+var hotelIcon1="images/hotel_1star.png"
+
+var hotelIcon2="images/hotel_2stars.png"
+
+var hotelIcon4="images/hotel_4stars.png"
+
+var hotelIcon5="images/hotel_5stars.png"
+
+
+          var marker = new google.maps.Marker({
+            animation: google.maps.Animation.DROP,
+            animation: google.maps.Animation.BOUNCE,
+            position: myLatlng,
+            title:"Mic check",
+            icon: image
+          });
+
+          var restaurantM=new google.maps.Marker({
+            animation: google.maps.Animation.drop,
+            position: resLatlng,
+            icon: resIcon
+          })
+          var todo=new google.maps.Marker({
+            animation: google.maps.Animation.drop,
+            position: todoLatlng,
+            icon: todoIcon
+          })
+          var hotel1=new google.maps.Marker({
+            animation: google.maps.Animation.drop,
+            position: hot1Latlng,
+            icon: hotelIcon1
+          })
+          var hotel2=new google.maps.Marker({
+            animation: google.maps.Animation.drop,
+            position: hot2Latlng,
+            icon: hotelIcon2
+          })
+          var hotel4=new google.maps.Marker({
+            animation: google.maps.Animation.drop,
+            position: hot4Latlng,
+            icon: hotelIcon4
+          })
+          var hotel5=new google.maps.Marker({
+            animation: google.maps.Animation.drop,
+            position: hot5Latlng,
+            icon: hotelIcon5
+          })
+        // Add the marker to the map by calling setMap()
+          marker.setMap(map);
+          restaurantM.setMap(map);
+          todo.setMap(map);
+          hotel1.setMap(map);
+          hotel2.setMap(map);
+          hotel4.setMap(map);
+          hotel5.setMap(map);
+          map.mapTypes.set('map_style', styledMap);
+          map.setMapTypeId('map_style');
+      }
+
+      //      $(document).ready(function() {
+      //        initialize_gmaps();
+      //      });
+
+      google.maps.event.addDomListener(window, 'load', initialize_gmaps);
+    </script>
 
   </body>
 </html>  

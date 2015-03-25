@@ -1,0 +1,149 @@
+body {
+  font-family: verdana;
+  margin: 0;
+  display: block;
+  padding: 0;
+  background-color: #A37D62; }
+
+h1 {
+  font-weight: normal; }
+
+nav.nav-bar {
+  background-color: #69533F;
+  width: 100%;
+  color: #90cff0;
+  padding: 12px 0 10px 0;
+  height: 40px;
+  border-bottom: 1px solid black; }
+
+#current {
+  background-color: #4f9afd;
+  color: #542a0c; }
+
+div.nav-title {
+  display: inline;
+  padding: 30px 10px;
+  margin-top: 40px; }
+
+.nav-button {
+  display: inline;
+  padding: 30px 10px; }
+
+div.nav-button:hover {
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
+  background-color: #5a2f05; }
+
+label {
+  margin-left: 7px;
+  font-family: verdana;
+  color: #7b746e;
+  font-size: 20px;
+  /*  font-weight: bold;*/
+  display: block; }
+
+select {
+  margin: 7px;
+  width: 75%; }
+
+option {
+  font-family: verdana;
+  font-size: 15px;
+  /*  font-weight: bolder;*/
+  padding: 3px; }
+
+.do-list, .day-list {
+  padding: 20px 10px;
+  background-color: #edcea4;
+  margin: 20px 10px 20px 20px;
+  border-radius: 25px; }
+
+.btn-x {
+  background-color: #cd3737; }
+
+.btn-x:hover {
+  background-color: red; }
+
+.btn-plus {
+  background-color: #4f9afd; }
+
+.btn-plus:hover {
+  background-color: blue; }
+
+.day {
+  border: 3px solid #542a0c;
+  padding: 10px;
+  margin: 40px 100px 10px;
+  border-radius: 10px; }
+
+.day p {
+  margin-right: 17px;
+  font-family: verdana;
+  color: #542a0c;
+  font-size: 35px;
+  display: inline;
+  font-size: 25px;
+  /*  font-weight: bolder;*/ }
+
+div.list-banner button {
+  display: inline;
+  border: 3px solid #4f9afd;
+  background-color: #542a0c;
+  color: #4f9afd; }
+
+li {
+  display: inline; }
+
+button {
+  padding: 5px 10px;
+  border-radius: 50%;
+  color: white;
+  border: none; }
+
+h1 {
+  margin: 0;
+  padding: 1%;
+  display: inline; }
+
+.list {
+  margin-top: 40px; }
+
+/*.list-content p{
+
+}*/
+li {
+  list-style: none; }
+
+ol {
+  padding: 0 0 0 14px; }
+
+li p {
+  font-size: 20px;
+  font-family: verdana; }
+
+.entry-item {
+  width: 75%;
+  margin: 13px;
+  display: inline-block; }
+
+.list-banner {
+  border-radius: 25px;
+  padding: 15px;
+  margin: -20px -10px -20px -10px;
+  width: 97%;
+  background-color: #542a0c; }
+
+.nav-button a {
+  text-decoration: none;
+  color: #90cff0; }
+
+.col-lg-9 {
+  width: 75%;
+  float: left;
+  height: 100vh; }
+
+.col-lg-3 {
+  width: 24%;
+  float: left;
+  border-left: 3px solid #86674d; }
